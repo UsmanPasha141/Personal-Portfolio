@@ -705,9 +705,21 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+
     <script>
-      const dob = new Date("2003-02-17") - new Date();
-      document.getElementById("user-age").textContent = dob;
+        const dob = new Date("2003-02-17");
+        const today = new Date();
+    
+        let age = today.getFullYear() - dob.getFullYear();
+    
+        const monthDiff = today.getMonth() - dob.getMonth();
+    
+        if (monthDiff < 0 ||
+            (monthDiff === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+    
+        document.getElementById("user-age").textContent = age;
     </script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
