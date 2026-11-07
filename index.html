@@ -39,11 +39,7 @@
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <script>
-    const dob = new Date("2003-02-17") - new Date();
-    // document.getElementById("user-age").textContent = dob;
-    document.getElementById("user-age").textContent = 56
-  </script>
+ 
 
   <body class="index-page">
     <header id="header" class="header dark-background d-flex flex-column">
@@ -192,7 +188,7 @@
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                      <span id="user-age">45</span>
+                      <span id="user-age"></span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
@@ -709,6 +705,10 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+    <script>
+      const dob = new Date("2003-02-17") - new Date();
+      document.getElementById("user-age").textContent = dob;
+    </script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
